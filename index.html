@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Działki na Costa Blanca | Grunty pod inwestycję i budowę domu</title>
+  <meta name="description" content="Działki na Costa Blanca w Hiszpanii: grunty pod inwestycję, development i budowę domu. Analiza lokalizacji, możliwości zabudowy, mediów i potencjału wzrostu wartości.">
+  <link rel="canonical" href="https://example.com/pl/plots/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Olga Chernyshenko">
+  <meta name="theme-color" content="#873e23">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="preload" as="image" href="images/plot-hero.jpg" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #873e23;
+      --primary-dark: #6a2d16;
+      --primary-pale: #fcf4ef;
+      --accent: #e28743;
+      --accent-dark: #c8742f;
+      --text: #1f2933;
+      --text-soft: #5f6b76;
+      --muted: #97a3ad;
+      --line: rgba(15, 23, 42, 0.06);
+      --shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+      --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.05);
+      --radius: 24px;
+      --maxw: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at top left, rgba(135,62,35,0.06), transparent 30%), linear-gradient(180deg, #ffffff 0%, #fdf7ef 100%);
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 {
+      margin: 0 0 14px;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+    }
+    p { margin: 0 0 14px; line-height: 1.72; color: var(--text-soft); }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .page { padding: 32px 0 80px; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(135,62,35,0.08);
+      color: var(--primary-dark);
+      font-weight: 800;
+      border: 1px solid rgba(15,23,42,0.05);
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .back-link:hover {
+      transform: translateY(-2px);
+      background: rgba(135,62,35,0.12);
+    }
+
+    .hero-card,
+    .section-card,
+    .cta-box {
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+    }
+
+    .hero-card { overflow: hidden; }
+
+    .gallery-main {
+      position: relative;
+      background: var(--primary-pale);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .gallery-main::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 120px;
+      background: linear-gradient(180deg, transparent, rgba(15,23,42,0.10));
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .gallery-main img {
+      width: 100%;
+      height: min(52vw, 620px);
+      min-height: 320px;
+      object-fit: cover;
+      transition: transform .9s ease, filter .5s ease;
+    }
+
+    .gallery-main:hover img {
+      transform: scale(1.03);
+      filter: saturate(1.03) contrast(1.02);
+    }
+
+    .content {
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      color: var(--primary-dark);
+      text-wrap: balance;
+    }
+
+    .subtitle {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: var(--text-soft);
+      text-wrap: balance;
+    }
+
+    .contact-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 4px 0 18px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(135,62,35,0.08);
+      color: var(--primary-dark);
+      font-weight: 800;
+      border: 1px solid rgba(15,23,42,0.045);
+      transition: transform .22s ease, background .22s ease, box-shadow .22s ease;
+    }
+
+    .contact-inline:hover {
+      transform: translateY(-2px);
+      background: rgba(135,62,35,0.12);
+      box-shadow: 0 10px 20px rgba(15,23,42,0.06);
+    }
+
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+      margin: 0 0 22px;
+    }
+
+    .kpi {
+      padding: 18px 18px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(226,135,67,0.18);
+      background: linear-gradient(180deg, #fff 0%, #fff7ef 100%);
+      box-shadow: 0 8px 24px rgba(0,0,0,.04);
+      text-align: center;
+      transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+    }
+
+    .kpi:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 34px rgba(226,135,67,0.12);
+      border-color: rgba(226,135,67,0.34);
+    }
+
+    .kpi strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: var(--primary-dark);
+    }
+
+    .kpi .value {
+      font-weight: 900;
+      font-size: clamp(18px, 2.4vw, 24px);
+      color: var(--accent-dark);
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+    }
+
+    .lead {
+      width: 100%;
+      max-width: 100%;
+      font-size: 16px;
+      text-wrap: pretty;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .params-title {
+      margin: 34px 0 10px;
+      font-size: 24px;
+      color: var(--primary-dark);
+    }
+
+    .params-accent {
+      width: 68px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      margin-bottom: 14px;
+      border-radius: 999px;
+    }
+
+    .params {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+    }
+
+    .param {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 6px;
+      padding: 2px 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .param strong {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-right: 2px;
+    }
+
+    .section-card,
+    .cta-box {
+      margin-top: 28px;
+      padding: 30px;
+    }
+
+    .section-card h2,
+    .cta-box h2 {
+      color: var(--primary-dark);
+      font-size: clamp(24px, 4vw, 32px);
+    }
+
+    .section-card h2::after,
+    .cta-box h2::after {
+      content: "";
+      display: block;
+      width: 90px;
+      height: 2px;
+      margin-top: 12px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--accent), rgba(226,135,67,0.2));
+    }
+
+    .why-grid,
+    .plots-grid,
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .why-item,
+    .plot-card,
+    .category-card {
+      padding: 22px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+      transition: transform .28s ease, box-shadow .28s ease;
+    }
+
+    .plot-card,
+    .category-card {
+      padding: 0;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .plot-card:hover,
+    .category-card:hover,
+    .why-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 36px rgba(15,23,42,0.08);
+    }
+
+    .plot-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      transition: transform .7s ease, filter .45s ease;
+    }
+
+    .plot-card:hover img {
+      transform: scale(1.04);
+      filter: saturate(1.03) contrast(1.02);
+    }
+
+    .card-body {
+      padding: 22px;
+    }
+
+    .why-item strong,
+    .plot-card h3,
+    .category-card h3 {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 17px;
+      color: var(--primary-dark);
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(135,62,35,0.10);
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 800;
+      width: fit-content;
+      border: 1px solid rgba(135,62,35,0.10);
+      margin-bottom: 10px;
+    }
+
+    .contact-box {
+      text-align: center;
+      background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 12px;
+      margin: 20px 0 18px;
+    }
+
+    .contact-links a {
+      text-decoration: none;
+      font-weight: 700;
+      color: #6b7280;
+      font-size: 18px;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform .28s ease, box-shadow .28s ease, filter .28s ease, background .28s ease, border-color .28s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-main {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: #fff;
+      box-shadow: 0 12px 26px rgba(226,135,67,0.28);
+    }
+
+    .btn-main:hover {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 22px 38px rgba(200,116,47,0.30);
+      filter: saturate(1.08) brightness(1.02);
+    }
+
+    .btn-light {
+      background: #fff;
+      color: var(--primary-dark);
+      border: 1px solid rgba(226,135,67,0.22);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+    }
+
+    .btn-light:hover {
+      transform: translateY(-3px) scale(1.01);
+      background: rgba(135,62,35,0.05);
+      box-shadow: 0 16px 30px rgba(135,62,35,0.10);
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 14px;
+      text-align: left;
+      margin-top: 24px;
+    }
+
+    .contact-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      background: #ffffff;
+      color: var(--text);
+      outline: none;
+      font-family: inherit;
+      font-size: 16px;
+      transition: border-color .22s ease, box-shadow .22s ease, transform .22s ease;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .contact-form textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(135,62,35,0.12);
+      transform: translateY(-1px);
+    }
+
+    .sticky-contact {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1200;
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--line);
+      box-shadow: 0 -10px 28px rgba(15,23,42,0.08);
+      display: none;
+    }
+
+    .sticky-contact .wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      max-width: var(--maxw);
+      margin: 0 auto;
+    }
+
+    .sticky-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 16px;
+      border-radius: 999px;
+      font-weight: 900;
+      letter-spacing: .01em;
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: 0 10px 22px rgba(15,23,42,0.08);
+    }
+
+    .sticky-call { color: var(--primary-dark); }
+
+    .sticky-wa {
+      color: #fff;
+      background: linear-gradient(135deg, #25d366 0%, #149e48 100%);
+      border-color: transparent;
+      box-shadow: 0 12px 26px rgba(37,211,102,0.25);
+    }
+
+    @media (max-width: 980px) {
+      .gallery-main img { height: 440px; min-height: 440px; }
+      .why-grid,
+      .plots-grid,
+      .categories-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 920px) {
+      .kpi-row,
+      .contact-form-grid { grid-template-columns: 1fr; }
+      .cta-actions { flex-direction: column; align-items: stretch; }
+      .cta-actions .btn,
+      .contact-form .btn { width: 100%; }
+    }
+
+    @media (max-width: 768px) {
+      .container { max-width: 100%; padding: 0 14px; }
+      .page { padding: 20px 0 56px; }
+      .gallery-main img { height: 320px; min-height: 320px; }
+      .kpi-row { grid-template-columns: 1fr; gap: 10px; }
+      .section-card, .cta-box { padding: 24px; }
+      .sticky-contact { display: block; }
+      body { padding-bottom: 88px; }
+    }
+
+    @media (max-width: 560px) {
+      .container { max-width: 100%; padding: 0 10px; }
+      .page { padding: 10px 0 40px; }
+      .hero-card, .section-card, .cta-box { border-radius: 18px; }
+      .gallery-main img { height: 220px; min-height: 220px; }
+      h1 { font-size: clamp(30px, 9vw, 40px); }
+      .lead { font-size: 15px; }
+      .params { gap: 8px 14px; }
+      .param { font-size: 14px; }
+      .section-card, .cta-box, .why-item, .plot-card .card-body, .category-card .card-body { padding: 20px; }
+      .contact-form-grid { grid-template-columns: 1fr; }
+    }
+  
+
+    /* HEADER */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 18px;
+      color: var(--primary-dark);
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav a {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .nav a:hover {
+      color: var(--primary-dark);
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 60px;
+      padding: 48px 0;
+      background: linear-gradient(180deg, var(--primary-dark) 0%, #2a1209 100%);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      color: #fff;
+    }
+
+    footer strong {
+      display: block;
+      margin-bottom: 12px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    footer p {
+      margin: 6px 0;
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+    }
+
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/pl/" class="logo">Costa Blanca Invest</a>
+    <nav class="nav">
+      <a href="/pl/new-developments/">Deweloperzy</a>
+      <a href="/pl/plots/">Działki</a>
+      <a href="/pl/build-house/">Budowa</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </div>
+</header>
+  <div class="page">
+    <div class="container">
+      <a class="back-link" href="/pl/">← Wróć do strony głównej</a>
+
+      <div class="hero-card">
+        <div class="gallery-main">
+          <img src="images/plot-hero.jpg" alt="Działki na Costa Blanca w Hiszpanii" fetchpriority="high">
+        </div>
+      </div>
+
+      <div class="content">
+        <h1>Działki na Costa Blanca | Grunty pod inwestycję i budowę domu</h1>
+        <div class="subtitle">Hiszpania · Costa Blanca</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;">
+          <a class="contact-inline" href="tel:+34604158859">📞 +34 604 15 88 59</a>
+          <a class="contact-inline" href="https://wa.me/34604158859" target="_blank" rel="noopener">💬 WhatsApp</a>
+        </div>
+
+        <div class="kpi-row" aria-label="Kluczowe parametry kategorii">
+          <div class="kpi"><strong>Typy</strong><div class="value">prywatne i inwestycyjne</div></div>
+          <div class="kpi"><strong>Rynek</strong><div class="value">Costa Blanca</div></div>
+          <div class="kpi"><strong>Cel</strong><div class="value">budowa i development</div></div>
+        </div>
+
+        <p class="lead">Wyselekcjonowane działki na Costa Blanca w Hiszpanii mogą być początkiem bardzo silnej inwestycji, jeśli są dobrze dobrane pod względem lokalizacji, możliwości zabudowy i przyszłego projektu. Analizujemy grunt nie tylko jako ofertę sprzedaży, ale jako bazę pod dom, projekt premium lub przyszłą odsprzedaż.</p>
+        <p class="lead">Ta strona zbiera najważniejsze informacje o działkach budowlanych na Costa Blanca i prowadzi do wybranych kierunków inwestycyjnych. Dzięki temu klient od razu widzi, jakie działki mają realny sens prywatny lub inwestycyjny.</p>
+
+        <h2 class="params-title">Charakter tej kategorii</h2>
+        <div class="params-accent"></div>
+        <div class="params">
+          <div class="param"><strong>Lokalizacja</strong><span>Costa Blanca</span></div>
+          <div class="param"><strong>Kraj</strong><span>Hiszpania</span></div>
+          <div class="param"><strong>Segment</strong><span>działki budowlane</span></div>
+          <div class="param"><strong>Typy</strong><span>prywatne, inwestycyjne, development</span></div>
+          <div class="param"><strong>Klient</strong><span>prywatny i inwestycyjny</span></div>
+          <div class="param"><strong>Model</strong><span>analiza gruntu i potencjału zabudowy</span></div>
+        </div>
+      </div>
+
+      <section class="section-card">
+        <h2>Dlaczego działka to kluczowy etap inwestycji</h2>
+        <div class="why-grid">
+          <div class="why-item">
+            <strong>Potencjał zabudowy</strong>
+            <p>Analizujemy nie tylko cenę, ale również możliwości budowy, ukształtowanie terenu, dostęp do mediów i przyszły standard projektu.</p>
+          </div>
+          <div class="why-item">
+            <strong>Lokalizacja i wzrost wartości</strong>
+            <p>Mocna lokalizacja zwiększa płynność inwestycji, ułatwia przyszłą sprzedaż i wzmacnia potencjał wzrostu wartości gruntu.</p>
+          </div>
+          <div class="why-item">
+            <strong>Połączenie z budową</strong>
+            <p>Działka to dopiero początek. Łączymy wybór gruntu z projektem, technologią budowy i dalszą realizacją inwestycji.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <h2>Co sprawdzamy przed zakupem działki</h2>
+        <div class="why-grid">
+          <div class="why-item">
+            <strong>Dokumentacja i plan zabudowy</strong>
+            <p>Sprawdzamy przeznaczenie gruntu, ograniczenia zabudowy i możliwości wykorzystania działki pod wybrany cel.</p>
+          </div>
+          <div class="why-item">
+            <strong>Grunt i geodezja</strong>
+            <p>Oceniamy ukształtowanie terenu, spadki, warunki gruntowe i to, jak mogą wpłynąć na koszt fundamentów i całej budowy.</p>
+          </div>
+          <div class="why-item">
+            <strong>Media i dojazd</strong>
+            <p>Analizujemy dostęp do infrastruktury, mediów, dróg dojazdowych i otoczenia, które wpływają na komfort oraz wartość inwestycji.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card" id="plots">
+        <h2>Wybrane działki</h2>
+        <div class="plots-grid">
+          <a href="/pl/plots/plot-sea-view/" class="plot-card">
+            <img src="images/plot.jpg" alt="Działka z widokiem na Costa Blanca">
+            <div class="card-body">
+              <div class="chip">Zobacz szczegóły</div>
+              <h3>Działka z widokiem</h3>
+              <p>Idealna pod willę premium lub prywatny projekt w mocnej lokalizacji.</p>
+            </div>
+          </a>
+
+          <a href="/pl/plots/investment-plot/" class="plot-card">
+            <img src="images/plot-investment.jpg" alt="Działka inwestycyjna Alicante">
+            <div class="card-body">
+              <div class="chip">Zobacz szczegóły</div>
+              <h3>Działka inwestycyjna</h3>
+              <p>Pod development, sprzedaż lub etapowe wejście w rynek Costa Blanca.</p>
+            </div>
+          </a>
+
+          <a href="/pl/plots/build-house-plot/" class="plot-card">
+            <img src="images/plot-build.jpg" alt="Działka pod budowę domu w Hiszpanii">
+            <div class="card-body">
+              <div class="chip">Zobacz szczegóły</div>
+              <h3>Działka pod budowę</h3>
+              <p>Połączenie gruntu z projektem domu i doborem technologii realizacji.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <h2>Inne kategorie</h2>
+        <div class="categories-grid">
+          <a href="/pl/new-developments/" class="category-card">
+            <div class="card-body">
+              <h3>Deweloperzy</h3>
+              <p>Nowe inwestycje od sprawdzonych partnerów na Costa Blanca.</p>
+            </div>
+          </a>
+
+          <a href="/pl/plots/" class="category-card">
+            <div class="card-body">
+              <h3>Działki</h3>
+              <p>Grunty pod inwestycje, development i budowę prywatnego domu.</p>
+            </div>
+          </a>
+
+          <a href="/pl/build-house/" class="category-card">
+            <div class="card-body">
+              <h3>Budowa domów</h3>
+              <p>Nowoczesne technologie budowy w Hiszpanii od działki do kluczy.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="cta-box contact-box">
+        <h2>Kontakt</h2>
+        <p>Skontaktuj się, aby otrzymać działki dopasowane do budżetu, celu inwestycyjnego i planowanego projektu na Costa Blanca.</p>
+        <div class="contact-links">
+          <a href="tel:+34604158859">+34 604 15 88 59</a>
+          <a href="mailto:o.czernyszenko@gmail.com">o.czernyszenko@gmail.com</a>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-main" href="tel:+34604158859">Zadzwoń</a>
+          <a class="btn btn-light" href="https://wa.me/34604158859" target="_blank" rel="noopener">Napisz na WhatsApp</a>
+        </div>
+        <form class="contact-form" id="contact-form" action="#" method="post">
+          <div class="contact-form-grid">
+            <input type="text" name="name" placeholder="Twoje imię" required>
+            <input type="tel" name="phone" placeholder="Telefon / WhatsApp" required>
+          </div>
+          <input type="email" name="email" placeholder="Email">
+          <textarea name="message" placeholder="Napisz, jaka działka Cię interesuje"></textarea>
+          <button class="btn btn-main" type="submit">Wyślij zapytanie</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <div class="sticky-contact" aria-label="Szybki kontakt">
+    <div class="wrap">
+      <a href="tel:+34604158859" class="sticky-btn sticky-call">Zadzwoń teraz</a>
+      <a href="https://wa.me/34604158859" target="_blank" rel="noopener" class="sticky-btn sticky-wa">💬 WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const formData = new FormData(contactForm);
+          const name = formData.get('name') || '';
+          const phone = formData.get('phone') || '';
+          const email = formData.get('email') || '';
+          const message = formData.get('message') || '';
+          const text = `Nowe zapytanie ze strony Działki:\n\nImię: ${name}\nTelefon: ${phone}\nEmail: ${email}\n\nWiadomość:\n${message}`;
+          const url = `https://wa.me/34604158859?text=${encodeURIComponent(text)}`;
+          const opened = window.open(url, '_blank', 'noopener');
+          if (!opened) window.location.href = url;
+        });
+      }
+    });
+  </script>
+
+
+<footer>
+  <div class="container">
+    <strong>Costa Blanca Realty & Construction</strong>
+    <p>Budowa domów w Hiszpanii na Costa Blanca — technologie drewniane, prefabrykowane, szkieletowe i Thermochip, fundamenty, remonty pod klucz i premium wykończenia.</p>
+    <p>© 2026 | Strona stworzona przez Olga Chernyshenko — specjalista ds. nieruchomości w Polsce i Hiszpanii.</p>
+  </div>
+</footer>
+
+</body>
+</html>
